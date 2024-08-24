@@ -1,5 +1,4 @@
 import React from "react";
-import ThoughtBubble from "./ThinkBubble";
 import SpeechBubble from "./MessageBubble";
 import ThinkBubble from "./ThinkBubble";
 
