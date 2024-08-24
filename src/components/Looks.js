@@ -13,7 +13,7 @@ export default function Looks({
   setMessageOpen,
   message,
   setMessage,
-  addToStack
+  addToStack,
 }) {
   const [localSize, setLocalSize] = useState({
     changeSize: 10,
@@ -37,12 +37,12 @@ export default function Looks({
 
   function show() {
     setVisibility("visible");
-    addToStack({ type: 'SHOW' });
+    addToStack({ type: "SHOW" });
   }
 
   function hide() {
     setVisibility("hidden");
-    addToStack({ type: 'HIDE' });
+    addToStack({ type: "HIDE" });
   }
 
   function handleSetClick(e) {
@@ -50,7 +50,7 @@ export default function Looks({
       return;
     }
     setSize((prevSize) => prevSize * (localSize.setsize / 100));
-    addToStack({ type: 'SET_SIZE', size: localSize.setsize });
+    addToStack({ type: "SET_SIZE", size: localSize.setsize });
   }
 
   function handleChangeClick(e) {
@@ -58,7 +58,7 @@ export default function Looks({
       return;
     }
     setSize((prev) => prev + localSize.changeSize);
-    addToStack({ type: 'SET_SIZE', size: size + localSize.changeSize });
+    addToStack({ type: "SET_SIZE", size: localSize.changeSize });
   }
 
   function handleMessageChange(e) {
@@ -75,7 +75,7 @@ export default function Looks({
     }
     setThinkOpen(false);
     setMessageOpen(true);
-    addToStack({ type: 'MESSAGE', message });
+    addToStack({ type: "MESSAGE", message });
   }
 
   function handleThinkClick(e) {
@@ -84,7 +84,7 @@ export default function Looks({
     }
     setThinkOpen(true);
     setMessageOpen(false);
-    addToStack({ type: 'THINK', message: thinkMessage });
+    addToStack({ type: "THINK", message: thinkMessage });
   }
 
   return (
