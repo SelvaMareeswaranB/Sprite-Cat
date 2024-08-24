@@ -1,0 +1,41 @@
+#bubble {
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  width: 200px;
+  height: 80px;
+  border: 2px solid #898989;
+  border-radius: 20px;
+}
+
+#text {
+  position: relative;
+  top: 26px;
+  font-family: ComicFighter, Georgia;
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+#arrow_border {
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #898989;
+  border-right: 30px solid transparent;
+  position: absolute;
+  bottom: -30px;
+  left: 65px;
+}
+
+#arrow_inner {
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid white;
+  border-right: 30px solid transparent;
+  position: absolute;
+  bottom: -25px;
+  left: 67px;
+}

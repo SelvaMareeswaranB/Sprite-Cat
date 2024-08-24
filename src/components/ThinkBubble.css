@@ -1,0 +1,48 @@
+#bubble {
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  width: 200px;
+  height: 80px;
+  border: 2px solid #898989;
+  border-radius: 20px;
+}
+
+#text {
+  position: relative;
+  top: 26px;
+  font-family: ComicFighter, Georgia;
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+#circles {
+  position: absolute;
+  bottom: -18px;
+  left: 44%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.circle {
+  border: 3px solid #898989;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.circle1 {
+  width: 15px;
+  height: 12px;
+}
+
+.circle2 {
+  width: 11px;
+  height: 8px;
+}
+
+.circle3 {
+  width: 8px;
+  height: 4px;
+}

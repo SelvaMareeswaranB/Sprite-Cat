@@ -11,10 +11,18 @@ module.exports = merge([
     optimization: {
       minimize: true,
       minimizer: [
-        // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+        // Uncomment the line below to extend existing minimizers if needed
         // `...`,
         new CssMinimizerPlugin(),
       ],
+    },
+    performance: {
+      hints: 'warning', // You can use 'warning' or 'error'
+      maxAssetSize: 3000000, // 3 MiB
+      maxEntrypointSize: 3000000, // 3 MiB
+      assetFilter: (assetFilename) => {
+        return assetFilename.endsWith('.js') || assetFilename.endsWith('.css'); // Only apply the performance hints to JavaScript and CSS files
+      },
     },
   },
 ]);

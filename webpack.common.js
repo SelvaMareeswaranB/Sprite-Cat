@@ -6,8 +6,9 @@ module.exports = {
     app: "./src/index.js",
   },
   output: {
-    // filename: "app.js",
-    path: path.resolve(__dirname, "public"),
+    filename: "bundle.js", // Define the output file name here
+    path: path.resolve(__dirname, "build"), // Set your build folder here
+    clean: true, // Optional: Clean the build folder before each build
   },
   module: {
     rules: [
@@ -46,4 +47,8 @@ module.exports = {
     ],
   },
   plugins: [new MiniCssExtractPlugin()],
+  performance: {
+    maxAssetSize: 3000000, // 3 MB
+    maxEntrypointSize: 3000000, // 3 MB
+  },
 };
