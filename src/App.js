@@ -68,9 +68,7 @@ export default function App() {
             y: action.y,
           }));
           break;
-        case "ON_EDGE_BOUNCE":
-          setPosition({ x: action.x, y: action.y });
-          break;
+
         case "GLIDE":
           setDuration(action.duration);
           setPosition({ x: action.x, y: action.y });
