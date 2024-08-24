@@ -1,5 +1,4 @@
 import React from "react";
-import "../global.css"
 export default function SharedInput({ value, handleChange }) {
   return (
     <input
